@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'com.zaxxer:HikariCP:5.0.1'//jdbc - HikariCP; DataSource 를 가져오기 위한 목적
+    implementation 'org.springframework:spring-jdbc:5.3.22'//ResourceDatabasePopulator 사용목적
+
+    implementation 'ch.qos.logback:logback-classic:1.2.3'//logback-classic
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.2'
+    testImplementation 'org.mockito:mockito-core:3.12.4'
+
+    testImplementation 'org.assertj:assertj-core:3.23.1'
+
+    testImplementation 'com.h2database:h2:2.1.214'//in memory db h2
+}
+
+test {
+    useJUnitPlatform()
+}
