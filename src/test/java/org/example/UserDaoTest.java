@@ -20,7 +20,7 @@ public class UserDaoTest {
         DatabasePopulatorUtils.execute(populator, ConnectionManager.getDataSource());
     }
 
-    @DisplayName("UserDao 를 생성한다.")
+    @DisplayName("UserDao 로 저장 조회를 한다.")
     @Test
     void create() throws SQLException {
         //given
